@@ -17,3 +17,21 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int &a,int &b,int &c,int &d){
+	int money[]={50,100,500,1000};
+	int checker[4];
+	for(int i=0;i<4;i++){
+		checker[i]=rand()%4;
+		for(int j =0;j<i;j++){
+			if(checker[i]==checker[j]){
+				i--;
+				break;
+			}
+		}
+
+	}
+	a = money[checker[0]];
+	b = money[checker[1]];
+	c = money[checker[2]];
+	d = money[checker[3]];
+}
